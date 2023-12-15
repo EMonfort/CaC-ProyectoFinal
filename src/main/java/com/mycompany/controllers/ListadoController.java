@@ -1,4 +1,4 @@
-package com.mycompany.dto.controllers;
+package com.mycompany.controllers;
 
 import com.mycompany.daos.OradorDAO;
 import com.mycompany.dto.Orador;
