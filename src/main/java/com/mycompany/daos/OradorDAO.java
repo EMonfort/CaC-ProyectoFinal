@@ -16,7 +16,7 @@ import java.util.List;
  * @author emonfort
  */
 public class OradorDAO {
-    	public List<Orador> listarProductos() {
+    	public List<Orador> listarOradores() {
 		String sql = "SELECT * FROM ORADORES ";
 		
 		//Connection

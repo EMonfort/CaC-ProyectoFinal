@@ -20,11 +20,11 @@ import javax.servlet.http.HttpServletResponse;
 public class ListadoController extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		
-		//crear la instancia de ProductoDAO
-		OradorDAO dao = new OradorDAO();
-		
-		//invocar al metodo listarProductos()
-		List<Orador> listado = dao.listarProductos();
+		//crear la instancia de OradorDAO
+		OradorDAO dao = new OradorDAO();		
+
+		//invocar al metodo listarOradores()
+		List<Orador> listado = dao.listarOradores();
 		
 		//grabar el listado en el request para que lo vea la siguiente pagina
 		req.setAttribute("listado", listado);
