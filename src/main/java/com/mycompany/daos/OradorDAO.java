@@ -57,4 +57,27 @@ public class OradorDAO {
 		}
 		return list;
 	}
+        
+        public void crearOrador(String nombre, String apellido, String mail, String tema) {
+		
+		Connection con = AdministradorDeConexiones.getConnection();
+		
+		if(con != null) { 
+			// insert en la db > SQL: INSERT INTO....
+			String sql = "INSERT INTO oradores (nombre, apellido,fecha_alta,tema,mail) ";
+			sql += "VALUES('"+nombre+"','"+apellido+"',CURRENT_DATE,'"+tema+"','"+mail+"')";
+			
+			//control de errores
+			try {
+				Statement st = con.createStatement();			
+				st.execute(sql);
+				
+				//cierre de conexion
+				con.close();
+				
+			}catch (Exception e) {
+				e.printStackTrace();
+			}
+		}
+	}
 }

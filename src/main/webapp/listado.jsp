@@ -16,7 +16,7 @@
             <div class="container">
                 
                 <section class="bg-secondary-subtle border rounded-5 m-4 px-2 pt-2 pb-3 col-12 mx-auto text-center">
-      <h2 class="my-4">Listado</h2>
+      <h2 class="my-4">Oradores</h2>
       <table class="table table-sm table-striped table-hover border border-success">
                       <thead>
                         <tr>

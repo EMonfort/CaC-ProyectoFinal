@@ -16,7 +16,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author emonfort
  */
-@WebServlet("/api/oradores")
+@WebServlet(urlPatterns ={"/api/oradores", ""})
 public class ListadoController extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		

@@ -10,10 +10,10 @@
           <a class="nav-link" href="<%=request.getContextPath()%>/alta.jsp">Alta</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="<%=request.getContextPath()%>/api/ListadoController">Listado</a>
+          <a class="nav-link" href="<%=request.getContextPath()%>/api/oradores">Oradores</a>
         </li>
       </ul>
-      <form class="d-flex"	
+      <form class="d-flex"
       	action="<%=request.getContextPath()%>/api/BuscarController" 
       	method="get">
         <input name="clave" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
