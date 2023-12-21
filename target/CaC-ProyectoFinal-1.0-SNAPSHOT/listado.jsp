@@ -50,7 +50,7 @@
 
                 <td>
                   <a class="btn btn-danger" href="<%=request.getContextPath()%>/api/EliminarController?id=<%=unOrador.getId()%>" role="button">Eliminar</a> | 
-                  <a class="btn btn-secondary" href="<%=request.getContextPath()%>/api/EditarController?id=<%=unOrador.getId()%>" role="button">Editar</a>
+                  <a class="btn btn-secondary" href="<%=request.getContextPath()%>/api/orador?id=<%=unOrador.getId()%>" role="button">Editar</a>
                 </td>
               </tr>
              <%

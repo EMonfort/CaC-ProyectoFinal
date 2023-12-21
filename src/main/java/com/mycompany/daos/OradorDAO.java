@@ -80,4 +80,59 @@ public class OradorDAO {
 			}
 		}
 	}
+        
+        public Orador obtenerPorId(Long id) {
+		String sql = "SELECT * FROM oradores WHERE id_orador="+id;
+		
+		//Connection
+		Connection con = AdministradorDeConexiones.getConnection();
+	
+		Orador oradorFromDb = null;
+		
+		//Statement
+		try {
+			Statement st = con.createStatement();
+			
+			//resultset
+			ResultSet rs = st.executeQuery(sql);
+			
+			//VIENE UN SOLO REGISTRO!!!
+			
+			if(rs.next()) {//si existe, hay uno solo
+				// rs > sacando los datos
+                                Long idOrador = rs.getLong(1);//tomar la primer columna
+				String nombre = rs.getString(2);
+				String apellido = rs.getString(3);
+				String mail = rs.getString(4);
+                                String tema = rs.getString(5);
+                                Timestamp fechaAlta = rs.getTimestamp(6);
+				
+				oradorFromDb = new Orador(idOrador,nombre,apellido,mail,tema,fechaAlta);
+			}			
+		} catch (SQLException e) {
+			// ERRORES
+			e.printStackTrace();
+		}
+		return oradorFromDb;
+	}
+
+        public void actualizarOrador(String nombre, String apellido, String mail, String tema, Long id) {
+            Connection con = AdministradorDeConexiones.getConnection();
+		if(con != null) { 
+			String sql = "UPDATE oradores "
+					+ " set nombre='"+nombre+"',"
+					+ " apellido='"+apellido+"',"
+					+ " mail='"+mail+"',"
+                                        + " tema='"+tema+"'"
+					+ " WHERE id_orador = '"+id+"'";		
+		
+			try {
+				Statement st = con.createStatement();			
+				st.executeUpdate(sql);
+				con.close();
+			}catch (Exception e) {
+				e.printStackTrace();
+			}
+		}
+        }
 }
