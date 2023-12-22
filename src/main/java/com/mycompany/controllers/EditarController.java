@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 
-@WebServlet("/api/orador")
+@WebServlet("/api/editarorador")
 public class EditarController extends HttpServlet {
 	
 	@Override

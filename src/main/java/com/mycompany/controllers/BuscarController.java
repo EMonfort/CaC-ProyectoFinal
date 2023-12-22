@@ -27,7 +27,7 @@ public class BuscarController extends HttpServlet {
             //invocar el metodo buscar(clave)
             List<Orador> listado = dao.buscar(searchBy, searchString);
 
-            //guardar en el request el producto
+            //guardar en el request el orador
             req.setAttribute("listado", listado);
 
             //ir a la siguiente pagina

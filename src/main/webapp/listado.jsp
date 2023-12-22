@@ -15,7 +15,7 @@
         <main>
             <div class="container">
                 <section class="bg-secondary-subtle border rounded-5 m-4 px-2 pt-2 pb-2 col-12 mx-auto text-center">
-                    <form class="row g-1 gx-5"
+                    <form class="d-flex justify-content-around g-1 gx-5"
                         action="<%=request.getContextPath()%>/api/BuscarController"
                         method="get">
                         <div class="col-md-4 ml-3"> 
@@ -30,7 +30,7 @@
                             <input name="searchString" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">                            
                         </div>
                         <div class="col-md-2">
-                            <button class="btn btn-outline-success" type="submit">Buscar</button>
+                            <button class="btn btn-primary" type="submit">Buscar</button>
                         </div>                            
                       </form>
                 </section>
@@ -71,8 +71,9 @@
                           <td><%=unOrador.getFechaAlta() %></td>
 
                           <td>
-                            <a class="btn btn-danger" href="<%=request.getContextPath()%>/api/eliminarorador?id=<%=unOrador.getId()%>" role="button">Eliminar</a> | 
-                            <a class="btn btn-secondary" href="<%=request.getContextPath()%>/api/orador?id=<%=unOrador.getId()%>" role="button">Editar</a>
+                            <a class="btn btn-info" href="<%=request.getContextPath()%>/api/orador?id=<%=unOrador.getId()%>" role="button">Ver</a> |
+                            <a class="btn btn-primary" href="<%=request.getContextPath()%>/api/editarorador?id=<%=unOrador.getId()%>" role="button">Editar</a> |
+                            <a class="btn btn-danger" href="<%=request.getContextPath()%>/api/eliminarorador?id=<%=unOrador.getId()%>" onclick="return confirm('¿Desea eliminar al orador?');" role="button">Eliminar</a>                           
                           </td>
                         </tr>
                        <%
@@ -80,7 +81,8 @@
                        %>
 
                   </tbody>
-                </table>
+                </table>                      
+ 
               </section>
 
                       
