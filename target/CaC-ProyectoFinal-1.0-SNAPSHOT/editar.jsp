@@ -46,7 +46,7 @@
                               <label for="exampleFormControlTextarea1" class="form-label">Tema</label>
                               <input name="tema"
                                     value="<%=orador.getTema()%>" 
-                                    type="text" class="form-control" id="exampleFormControlTextarea1" maxlength="7" required>
+                                    type="text" class="form-control" id="exampleFormControlTextarea1" maxlength="200" required>
                             </div>
                             <a class="btn btn-secondary m-2" href="<%=request.getContextPath()%>/api/oradores" role="button">Cancelar</a>
                             <button class="btn btn-primary">

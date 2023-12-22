@@ -47,7 +47,7 @@
                                     <th scope="col">APELLIDO</th>
                                     <th scope="col">MAIL</th>
                                     <th scope="col">TEMA</th>
-                                    <th scope="col">FEECHA ALTA</th>
+                                    <th scope="col">FECHA ALTA</th>
                                     <th scope="col">ACCIONES</th>
                                   </tr>
                                 </thead>
@@ -73,7 +73,7 @@
                           <td>
                             <a class="btn btn-info" href="<%=request.getContextPath()%>/api/orador?id=<%=unOrador.getId()%>" role="button">Ver</a> |
                             <a class="btn btn-primary" href="<%=request.getContextPath()%>/api/editarorador?id=<%=unOrador.getId()%>" role="button">Editar</a> |
-                            <a class="btn btn-danger" href="<%=request.getContextPath()%>/api/eliminarorador?id=<%=unOrador.getId()%>" onclick="return confirm('¿Desea eliminar al orador?');" role="button">Eliminar</a>                           
+                            <a class="btn btn-danger" href="<%=request.getContextPath()%>/api/eliminarorador?id=<%=unOrador.getId()%>" onclick="return confirm('¿Desea eliminar a <%=unOrador.getNombre()%> <%=unOrador.getApellido()%>?');" role="button">Eliminar</a>                           
                           </td>
                         </tr>
                        <%
